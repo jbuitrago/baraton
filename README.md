@@ -22,12 +22,15 @@ Instalacion
 1- Clonar el respositorio
 git clone https://github.com/jbuitrago/baraton.git
 
-2- Instalar las dependencias
+2- Pasar al branch develop
+git checkout develop
+
+3- Instalar las dependencias
  
 cd baraton
 npm install
 
-3- Ejecutar el proyecto
+4- Ejecutar el proyecto
 
 ng serve
 

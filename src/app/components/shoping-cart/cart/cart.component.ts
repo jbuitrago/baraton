@@ -48,4 +48,9 @@ export class CartComponent implements OnInit {
    this._cookieService.set( 'cookieCart', JSON.stringify(this._ProductsService.cart) );
 
   }
+
+  pagar(){
+
+    this._cookieService.deleteAll();
+  }
 }
