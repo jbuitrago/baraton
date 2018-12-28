@@ -1,0 +1,27 @@
+<h3>Filtros</h3>
+<label class="font-weight-light"><b>Rango de Precio</b></label>
+<input  class="form-control" type="number" value="" min="0" max="100000" id="range1" placeholder="Desde">
+<input  class="form-control" type="number" value="" min="0" max="100000" id="range2" placeholder="Hasta">
+<button type="button" class="btn btn-primary" (click)="filterByPrice()">Buscar</button>
+<br>
+<label class="font-weight-light"><b>Cantidad</b></label>
+<input  class="form-control" type="number" value="" min="0" max="100000" id="quantity" placeholder="Cantidad">
+<button type="button" class="btn btn-primary" (click)="filterByQuantity()">Buscar</button>
+<br>
+<label class="font-weight-light"><b>Disponible</b></label><br>
+
+<div class="custom-control custom-radio">
+
+  <input type="radio" class="custom-control-input" id="Si" name="available">
+  <label class="custom-control-label" for="Si">Si</label>
+</div>
+
+<div class="custom-control custom-radio">
+  <input type="radio" class="custom-control-input" id="No" name="available">
+  <label class="custom-control-label" for="No">No</label>
+</div>
+<button type="button" class="btn btn-primary" (click)="filterByAvailable()">Buscar</button>
+
+
+<app-categories></app-categories>
+

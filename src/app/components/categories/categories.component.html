@@ -1,0 +1,18 @@
+<h3>Categorias</h3>
+<ul>
+  <li><a (click)="filterByCategory();" class="font-weight-light">Todos</a></li>
+  <input type="text" (keydown)="filterByName($event,0);"  class="form-control" placeholder="Nombre" >
+  <ng-template #recursiveList let-categories>
+    <li *ngFor="let item of categories " >
+      <a (click)="filterByCategory(item.id);" class="font-weight-light">{{item.name}}</a>
+      <ul *ngIf="item.sublevels">
+        <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.sublevels }" ></ng-container>
+      </ul>
+      <div *ngIf="!item.sublevels">
+        <input type="text" (keydown)="filterByName($event,item.id);" class="form-control" placeholder="Nombre">
+      </div>
+    </li>
+  </ng-template>
+  <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: categories }"></ng-container>
+</ul>
+

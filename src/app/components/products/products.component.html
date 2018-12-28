@@ -1,0 +1,26 @@
+<h3>Productos</h3>
+{{products | json}}
+<table class="table table-bordered">
+  <thead>
+  <tr>
+
+    <th scope="col">Nombre</th>
+    <th scope="col">Cant.<a (click)="OrderBy('quantity','up');">↑</a><a (click)="OrderBy('quantity','down');"> ↓</a></th>
+    <th scope="col">Cat.</th>
+    <th scope="col">$<a (click)="OrderBy('price','up');">↑</a><a (click)="OrderBy('price','down');"> ↓</a></th>
+    <th scope="col">Disp.<a (click)="OrderBy('available','up');">↑</a><a (click)="OrderBy('available','down');"> ↓</a></th>
+    <th scope="col">Add</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product2 of _ProductsService.productsService ">
+
+    <td>{{product2.name}}</td>
+    <td>{{product2.quantity}}</td>
+    <td>{{product2.sublevel_id}}</td>
+    <td>{{product2.price}}</td>
+    <td>{{product2.available?'Si':'No'}}
+    <td><button type="button" class="btn btn-primary" (click)="add(product2)">+</button></td>
+  </tr>
+  </tbody>
+</table>

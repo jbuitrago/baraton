@@ -1,0 +1,30 @@
+<h3>Carrito</h3>
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th scope="col">Nombre</th>
+    <th scope="col">Cant.</th>
+    <th scope="col">$</th>
+    <th scope="col">Total</th>
+    <th scope="col">X</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of _ProductsService.cart ">
+    <td>{{product.name}}</td>
+    <td><input type="number" name="quantity_{{product.id}}" id="quantity_{{product.id}}" value="1" (change)="calcSuma(product)" class="form-control md"></td>
+    <td>{{product.price }}</td>
+    <td><input type="text" name="totalItem_{{product.id}}" id="totalItem_{{product.id}}" value="" class="form-control md" readonly></td>
+    <td><button type="button" class="btn btn-primary" (click) = "delete(product);">X</button></td>
+
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>Total</td>
+    <td><input type="text" name="total" id="total" value="" class="form-control md" readonly></td>
+    <td></td>
+  </tr>
+  </tbody>
+</table>
+
