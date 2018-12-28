@@ -1,27 +1,45 @@
 # Baraton
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
+Requerimientos Tecnicos
 
-## Development server
+$ node -v
+v8.12.0
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+$ git --version
+git version 2.19.1.windows.1
 
-## Code scaffolding
+$ npm -v
+6.4.1
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+$  ng v
+Angular CLI: 7.0.7
+Node: 8.12.0
+OS: win32 x64
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Instalacion
 
-## Running unit tests
+1- Clonar el respositorio
+git clone https://github.com/jbuitrago/baraton.git
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2- Instalar las dependencias
+ 
+cd baraton
+npm install
 
-## Running end-to-end tests
+3- Ejecutar el proyecto
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+ng serve
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+Descripcion de Ejercicio
+
+- Este proyecto se desarrollo con Angular 7
+- Se hicieron el 90% de los requetimientos tecnicos
+- El desplegable de categorias no esta colapsado
+- Los filtros son independientes
+- Los filtros de precio y cantidad solo se activan cuando se ingresan valores >0
+- Para ordenar los productos se debe dar click en la flecha que se encuentra al lado de cada opcion del titulo
+- Se esta guardando el listado de productos con cookies
+- No se esta guardando en la cookie la cantidad y los totales
