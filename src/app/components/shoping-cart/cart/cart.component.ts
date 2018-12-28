@@ -26,7 +26,6 @@ export class CartComponent implements OnInit {
 
     this._ProductsService.cart = this._ProductsService.cart.filter(cart => {
 
-
       return cart.name.trim().toUpperCase() != product.name.trim().toUpperCase()
 
     });
@@ -45,12 +44,14 @@ export class CartComponent implements OnInit {
     var toTalFinal = "$" + (price * quantity);
     var total = (<HTMLInputElement>document.getElementById("total"));
     totalItem_.value = toTalFinal;
-   this._cookieService.set( 'cookieCart', JSON.stringify(this._ProductsService.cart) );
+    this._cookieService.set( 'cookieCart', JSON.stringify(this._ProductsService.cart) );
 
   }
 
   pagar(){
 
     this._cookieService.deleteAll();
+    alert('Gracias por su compra');
+    location.href="/";
   }
 }
