@@ -19,7 +19,7 @@ OS: win32 x64
 
 Instalacion
 
-1- Clonar el respositorio
+1- Clonar el repositorio
 
 git clone https://github.com/jbuitrago/baraton.git
 
